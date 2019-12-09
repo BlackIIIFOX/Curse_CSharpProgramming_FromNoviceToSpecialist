@@ -7,16 +7,16 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
         public void DoExercise()
         {
             Console.Write("UserName = ");
-            string userName = Console.ReadLine();
+            var userName = Console.ReadLine();
             Console.WriteLine("");
             Console.WriteLine($"Hello, {userName}");
 
             Console.Write("X = ");
-            var x = int.Parse(Console.ReadLine());
+            var x = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException("Enter X."));
             Console.WriteLine("");
 
             Console.Write("Y = ");
-            var y = int.Parse(Console.ReadLine());
+            var y = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException("Enter Y"));
             Console.WriteLine("");
 
             var tmp = x;

@@ -1,4 +1,5 @@
-﻿using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises;
+﻿using System;
+using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist
 {
@@ -6,7 +7,15 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist
     {
         public static void Main()
         {
-            ExerciseFactory.ExerciseCreate("Exercise8_2").DoExercise();
+            try
+            {
+                ExerciseFactory.ExerciseCreate("Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise2").DoExercise();
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
     }
 }
