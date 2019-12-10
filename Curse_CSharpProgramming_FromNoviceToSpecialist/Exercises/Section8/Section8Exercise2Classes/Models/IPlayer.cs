@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise2Classes.Models
 {
     internal abstract class BasePlayer
     {
+        protected readonly List<AttemptModel> _attempts = new List<AttemptModel>();
+
         public int GuessedNumber { get; protected set; }
 
         public string PlayerName { get; }
@@ -27,17 +30,18 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Sect
             {
                 return GuessingStates.NumberIsLess;
             }
-            else
+
+            if (number < GuessedNumber)
             {
-                if (number < GuessedNumber)
-                {
-                    return GuessingStates.NumberIsMore;
-                }
-                else
-                {
-                    return GuessingStates.NumberIsEqual;
-                }
+                return GuessingStates.NumberIsMore;
             }
+
+            return GuessingStates.NumberIsEqual;
+        }
+
+        public void AppendResultAttempt(AttemptModel attempt)
+        {
+            _attempts.Add(attempt);
         }
 
         public abstract void PickNumber();

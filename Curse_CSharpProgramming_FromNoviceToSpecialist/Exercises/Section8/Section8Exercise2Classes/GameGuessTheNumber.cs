@@ -36,7 +36,10 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Sect
                 var number = _guessing.TryGuessNumber();
                 isAllAttemptsUsed = _guessing.AttemptsUsed >= _gameSettings.MaxAttempts;
 
-                switch (_mysterious.SuggestNumber(number))
+                var resultAttempt = _mysterious.SuggestNumber(number);
+                _guessing.AppendResultAttempt(new AttemptModel(_guessing.AttemptsUsed, number, resultAttempt));
+
+                switch (resultAttempt)
                 {
                     case GuessingStates.NumberIsLess:
                         Console.WriteLine($"The guessed number is less than {number}.");
@@ -50,12 +53,6 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Sect
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
-                }
-
-                if (!isGuessed)
-                {
-                    Console.WriteLine(
-                        $"{_guessing.PlayerName} made {_guessing.AttemptsUsed} attempt and did not guess the number.");
                 }
             }
 
