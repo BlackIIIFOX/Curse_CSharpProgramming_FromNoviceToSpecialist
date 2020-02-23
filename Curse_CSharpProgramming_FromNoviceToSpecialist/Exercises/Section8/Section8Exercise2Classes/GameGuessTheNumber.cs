@@ -20,7 +20,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Sect
                 player2 = new AiPlayer("AiPlayer", _gameSettings);
             }
 
-            Console.WriteLine($"Start new Game. {player1.PlayerName} vs {player2.PlayerName}");
+            Console.WriteLine($"Start new TicTacToeGame. {player1.PlayerName} vs {player2.PlayerName}");
             ChosePlayMod(player1, player2);
             CustomizeGame();
             _mysterious.PickNumber();
