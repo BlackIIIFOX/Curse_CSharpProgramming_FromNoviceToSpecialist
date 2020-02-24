@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Exercises\Section8\Section8Exercise4Classes\Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Exercises\Section8\Section8Exercise4Classes\Resources\WordsStockRus.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
