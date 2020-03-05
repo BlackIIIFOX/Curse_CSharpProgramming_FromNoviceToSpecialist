@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 {
     internal class Section3Exercise1 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             Console.WriteLine("Введите первое число:");
             var number1 = int.Parse(Console.ReadLine());
@@ -13,6 +14,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 
             var max = number1 > number2 ? number1 : number2;
             Console.WriteLine($"Максимальное число {max}");
+            return Task.CompletedTask;
         }
     }
 }

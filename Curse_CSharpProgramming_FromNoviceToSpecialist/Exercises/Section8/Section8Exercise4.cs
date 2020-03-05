@@ -1,9 +1,7 @@
-﻿
-
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise4Classes;
 using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise4Classes.Enums;
 using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise4Classes.Interfaces;
@@ -12,7 +10,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8
 {
     internal class Section8Exercise4 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             IHangmanGame hangmanGame = new HangmanGame();
 
@@ -42,6 +40,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8
                 : $"You lose. The word is \"{hangmanGame.GetWordIfGameEnd()}\"");
 
             Console.ReadLine();
+            return Task.CompletedTask;
         }
 
         private string GetPrintableTriedLetters(IHangmanGame hangmanGame)

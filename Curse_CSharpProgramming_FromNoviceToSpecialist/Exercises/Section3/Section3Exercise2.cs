@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 {
     internal class Section3Exercise2 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             Console.WriteLine("Кол-во чисел Фибоначчи:");
             var n = Int32.Parse(Console.ReadLine());
@@ -30,6 +31,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
             }
 
             Console.WriteLine();
+            return Task.CompletedTask;
         }
     }
 }

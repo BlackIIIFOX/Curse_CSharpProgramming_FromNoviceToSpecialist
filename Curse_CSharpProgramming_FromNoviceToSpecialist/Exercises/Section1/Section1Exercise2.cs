@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
 {
@@ -27,10 +28,11 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
             return Math.Sqrt(p / 2 * (p / 2 - a) * (p / 2 - b) * (p / 2 - c));
         }
 
-        public void DoExercise()
+        public Task DoExercise()
         {
             RequestSides();
             Console.WriteLine($"S = {CalculateHeron()}");
+            return Task.CompletedTask;
         }
     }
 }

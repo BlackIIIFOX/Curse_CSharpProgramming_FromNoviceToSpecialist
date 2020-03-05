@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
 {
@@ -35,7 +36,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
             _bodyMassIndex = _weight / (Math.Pow(_height / 100.0, 2));
         }
 
-        public void DoExercise()
+        public Task DoExercise()
         {
             RequestValue<string>(nameof(_lastName), ref _lastName);
             RequestValue<string>(nameof(_firstName), ref _firstName);
@@ -47,6 +48,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
             CalculateBodyMassIndex();
 
             Console.WriteLine(this.ToString());
+            return Task.CompletedTask;
         }
 
         public override string ToString()

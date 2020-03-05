@@ -1,7 +1,9 @@
-﻿namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises
+﻿using System.Threading.Tasks;
+
+namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises
 {
     internal interface IExercise
     {
-        void DoExercise();
+        Task DoExercise();
     }
 }

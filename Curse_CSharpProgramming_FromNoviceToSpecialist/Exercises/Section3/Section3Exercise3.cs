@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 {
@@ -6,7 +7,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
     {
         private const int MaxNumbers = 10;
 
-        public void DoExercise()
+        public Task DoExercise()
         {
             var countNumbers = 0;
             var numbers = new int[MaxNumbers];
@@ -49,10 +50,11 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
             if (countNumbers == 0)
             {
                 Console.WriteLine("Вы должны были ввести хотя бы одно число для нахождения среднего");
-                return;
+                return Task.CompletedTask;
             }
 
             Console.WriteLine($"Среднее: {sum / countNumbers}");
+            return Task.CompletedTask;
         }
     }
 }

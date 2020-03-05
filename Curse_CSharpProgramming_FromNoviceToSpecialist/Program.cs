@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist
 {
     public class Program
     {
-        public static void Main()
+        public static async Task Main()
         {
             try
             {
-                ExerciseFactory.ExerciseCreate("Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8.Section8Exercise4").DoExercise();
+                await ExerciseFactory.ExerciseCreate("Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section9.Section9Exercise1").DoExercise();
             }
             catch (ArgumentException e)
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 {
@@ -16,7 +17,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
             {'M', 1000}
         };
 
-        public void DoExercise()
+        public Task DoExercise()
         {
             // 1393
             //string romanNumber = "MXCDIII";
@@ -30,6 +31,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
             {
                 Console.WriteLine("Не может быть преобразовано в арабское число");
             }
+            return Task.CompletedTask;
         }
 
         private int RomanToArabicNumberConverter(string romanNumber)

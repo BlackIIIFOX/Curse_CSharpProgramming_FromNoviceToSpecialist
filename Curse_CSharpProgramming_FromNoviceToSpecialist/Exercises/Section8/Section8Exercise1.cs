@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section8
 {
     internal class Section8Exercise1 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             var cmlx1 = new Complex(5, 6);
             var cmlx2 = new Complex(30.1, 1.123);
             Console.WriteLine(cmlx1.Plus(cmlx2));
             Console.WriteLine(cmlx1.Minus(cmlx2));
+            return Task.CompletedTask;
         }
 
         #region Classes

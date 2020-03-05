@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
 {
     internal class Section1Exercise1 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             Console.Write("UserName = ");
             var userName = Console.ReadLine();
@@ -27,6 +28,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section1
 
             Console.Write("Number = ");
             Console.WriteLine($"Numbers of digits: {Console.ReadLine().Length}");
+            return Task.CompletedTask;
         }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 {
     internal class Section3Exercise5 : IExercise
     {
-        public void DoExercise()
+        public Task DoExercise()
         {
             int countTry = 0;
             while (true)
@@ -32,6 +33,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section3
 
                 countTry++;
             }
+            return Task.CompletedTask;
         }
     }
 }
