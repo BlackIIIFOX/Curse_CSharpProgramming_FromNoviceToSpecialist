@@ -10,7 +10,7 @@ namespace Curse_CSharpProgramming_FromNoviceToSpecialist
         {
             try
             {
-                await ExerciseFactory.ExerciseCreate("Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section9.Section9Exercise1").DoExercise();
+                await ExerciseFactory.ExerciseCreate("Curse_CSharpProgramming_FromNoviceToSpecialist.Exercises.Section9.Section9Exercise2").DoExercise();
             }
             catch (ArgumentException e)
             {
