@@ -16,6 +16,9 @@
     <None Update="Exercises\Section9\Section9Exercise2Classes\Resources\Top100ChessPlayers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Exercises\Section9\Section9Exercise3Classes\Resources\Questions.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
